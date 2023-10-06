@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="calculator">
+        <!-- SCREEN -->
+        <div class="screenDiv">
+            <input type="text" class="screen" id="result" disabled />
+        </div>
+
+        <!-- BUTTONS -->
+        <div>
+            <div class="btn-rows">
+                <div>
+                    <input type="button" id="btn-operation" value="AC" id="btn" onclick="clearAll()" />
+                </div>
+                <div>
+                    <input type="button" id="btn-operation" value="÷" onclick="display('/')" />
+                </div>
+                <div>
+                    <input type="button" id="btn-operation" value="x" onclick="display('x')" />
+                </div>
+                <div>
+                    <input type="button" id="btn-operation" value="<|" id="btn" onclick="clearLast()" />
+                </div>
+            </div>
+
+            <div class="btn-rows">
+                <div>
+                    <input type="button" id="btn-num" value="7" onclick="display('7')" />
+                </div>
+                <div>
+                    <input type="button" id="btn-num" value="8" onclick="display('8')" />
+                </div>
+                <div>
+                    <input type="button" id="btn-num" value="9" onclick="display('9')" />
+                </div>
+                <div>
+                    <input type="button" value="-" id="btn-operation" onclick="display('-')" />
+                </div>
+            </div>
+
+            <div class="btn-rows">
+                <div>
+                    <input type="button" id="btn-num" value="4" onclick="display('4')" />
+                </div>
+                <div>
+                    <input type="button" id="btn-num" value="5" onclick="display('5')" />
+                </div>
+                <div>
+                    <input type="button" id="btn-num" value="6" onclick="display('6')" />
+                </div>
+                <div>
+                    <input type="button" value="+" id="btn-operation" onclick="display('+')" />
+                </div>
+            </div>
+
+            <div class="btn-rows">
+                <div>
+                    <input type="button" id="btn-num" value="1" onclick="display('1')" />
+                </div>
+                <div>
+                    <input type="button" id="btn-num" value="2" onclick="display('2')" />
+                </div>
+                <div>
+                    <input type="button" id="btn-num" value="3" onclick="display('3')" />
+                </div>
+                <div class="flex-fill align-items-center">
+                    <input type="button" class="equal" value="=" onclick="calculate('=')" id="btn" />
+                </div>
+            </div>
+
+            <div class="btn-rows">
+                <div>
+                    <input type="button" id="btn-num" class="exp" value="e" onclick="display('e')" />
+                </div>
+                <div>
+                    <input type="button" id="btn-num" value="0" onclick="display('0')" />
+                </div>
+                <div>
+                    <input type="button" id="btn-num" value="." onclick="display('.')" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js"></script>
+</body>
+
+</html>
